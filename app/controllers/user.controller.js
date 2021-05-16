@@ -60,7 +60,7 @@ exports.submitLead = (req, res) => {
         uid: UID,
         lid: lead.id,
         status: "New",
-        reward: "0",
+        reward: "1000",
       })
         .then(() => {
           res.send({ message: "Lead referred successfully!" });
@@ -86,7 +86,7 @@ exports.myLeads = (req, res) => {
       }
       let startDate = new Date(0);
       let endDate = new Date();
-      if (req.query != {}) {
+      if (Object.keys(req.query).length !== 0) {
         startDate = getDate(req.query.from);
         endDate = getDate(req.query.to);
       }
