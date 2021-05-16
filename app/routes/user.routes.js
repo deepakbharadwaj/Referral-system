@@ -20,4 +20,9 @@ module.exports = function(app) {
     [authJwt.verifyToken],
     controller.submitLead
   );
+  app.get(
+    "/api/myLeads",
+    [authJwt.verifyToken],
+    controller.myLeads
+  );
 };
