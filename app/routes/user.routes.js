@@ -11,8 +11,13 @@ module.exports = function(app) {
   });
 
   app.get(
-    "/api/test/user",
+    "/api/user",
     [authJwt.verifyToken],
-    controller.userBoard
+    controller.userProfile
+  );
+  app.post(
+    "/api/submitLead",
+    [authJwt.verifyToken],
+    controller.submitLead
   );
 };

@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     reward: {
-      type: Sequelize.NUMBER
+      type: Sequelize.STRING
     }
   });
 
